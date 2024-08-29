@@ -39,7 +39,7 @@ function App() {
   const movieData = useSelector(state=>state.movies.movies)
   
   return (
-    <div>
+    <div className="bg-[#83B4FF]">
       <NavBar />
       
     <Movies page={page} pageDecrease={pageDecrease} pageIncrease={pageIncrease} movieData={movieData} handle={handle} />

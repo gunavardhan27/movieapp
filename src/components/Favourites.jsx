@@ -7,8 +7,8 @@ const Favourites = () => {
     favourites = JSON.parse(localStorage.getItem('favourites',favourites)) || []
   }
   return (
-    <div className='flex flex-col items-center justify-center gap-8 m-4'>
-      <p>Your Favourites</p>
+    <div className='flex flex-col items-center justify-center gap-8 bg-[#83B4FF] p-3'>
+      <p className='mt-4 text-3xl font-bold'>Your Favourites</p>
       <Map movies={favourites} alt='Loading' />
     </div>
   )

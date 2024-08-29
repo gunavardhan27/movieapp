@@ -11,7 +11,7 @@ const Movie = ({movie}) => {
     <div className='p-2 flex flex-col items-center justify-center gap-3'>
         <img className='w-[200px] h-[250px] md:h-[350px] md:w-[250px] rounded-md' src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} 
         alt={movie.original_title} />
-        <p className='text-xl font-bold w-[200px] md:w-[250px]'>{movie.original_title}</p>
+        <p className='text-xl font-bold w-[200px] md:w-[250px] text-white'>{movie.original_title}</p>
     </div>
     </button>
   )

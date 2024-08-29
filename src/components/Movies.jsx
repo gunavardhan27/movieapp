@@ -3,7 +3,7 @@ import Button from './Button'
 import Map from './Map';
 const Movies = ({page,pageDecrease,pageIncrease,movieData,handle}) => {
   return (
-    <div>
+    <div className=''>
     <Map movies={movieData[page-1]} alt='Loading....' />
     <div className="flex flex-row items-center justify-center mt-3 gap-3">
       <Button toggle={pageDecrease} className={`${page===1 && 'hidden'} p-2 hover:bg-blue-400 rounded-md`}>Prev</Button>

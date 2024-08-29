@@ -11,16 +11,16 @@ const NavBar = () => {
         navigate('/favourites')
     }
   return (
-    <div className='h-14 bg-slate-400 w-full mb-6 flex flex-row items-start justify-between p-3'>
-        <p className='basis-2/3 text-2xl md:text-3xl font-bold'>
-            MoviePlix
+    <div className='h-14 w-full mb-6 flex flex-row items-start justify-between p-3'>
+        <p className='basis-2/3 text-2xl md:text-3xl font-bold flex flex-row'>
+            <p>Movie</p><p className='text-blue-800'>Plix</p>
         </p>
         <div className=' basis-1/3 flex flex-row items-center justify-center gap-1 md:gap-4'>
             <button onClick={handle} className='flex flex-row items-center justify-between'>
                 Search   
-            <CiSearch className='w-[30px] h-[30px]'  />
+            <CiSearch className='w-[30px] h-[30px]' />
             </button>
-            <p className='p-2 bg-slate-100 rounded-md' onClick={handleFavourite}>Favourites</p>
+            <button className='p-2 bg-slate-100 rounded-md shadow-black shadow-md' onClick={handleFavourite}>Favourites</button>
         </div>
     </div>
   )

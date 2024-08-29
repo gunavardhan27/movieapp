@@ -33,7 +33,7 @@ const MovieDescription = () => {
   }
 
   return (
-    <div className='p-2'>
+    <div className='p-2 bg-[#83B4FF] '>
       <FaCircleArrowLeft className='m-3 h-[40px] w-[40px]' onClick={handle} />
     <div className='flex flex-col md:flex-row items-center justify-center md:items-start md:justify-around gap-4 m-20 shadow-black shadow-lg bg-gray-400 p-2'>
     <img className='w-[90%] h-[150px] md:basis-[56%] md:h-[440px] rounded-md' src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`} />
@@ -46,14 +46,14 @@ const MovieDescription = () => {
       <FaRegStar className='text-yellow-500' />
        {movie.vote_average}
       </p>
-      <p className='w-[80%] text-lg'>
+      <p className='w-[95%] md:w-[80%] text-lg'>
       {movie.overview}
       </p>
       <div>
       {favourites.some(mv=>mv.id === movie.id) ? 
-        <button className='p-2 bg-blue-300 rounded-md mt-4' onClick={handleRemove}>Remove from Favourites </button>
+        <button className='p-2 bg-blue-300 rounded-md mt-4 shadow-black shadow-md' onClick={handleRemove}>Remove from Favourites </button>
       :
-      <button className='p-2 bg-blue-300 rounded-md mt-4' onClick={handleAdd}>Add to Favourites </button>
+      <button className='p-2 bg-blue-300 rounded-md mt-4 shadow-black shadow-md' onClick={handleAdd}>Add to Favourites </button>
       }
       </div>
     </div>
