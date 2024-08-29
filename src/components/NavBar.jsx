@@ -12,10 +12,10 @@ const NavBar = () => {
     }
   return (
     <div className='h-14 bg-slate-400 w-full mb-6 flex flex-row items-start justify-between p-3'>
-        <p className='basis-2/3 text-3xl font-bold'>
+        <p className='basis-2/3 text-2xl md:text-3xl font-bold'>
             MoviePlix
         </p>
-        <div className=' basis-1/3 flex flex-row items-center justify-center gap-4'>
+        <div className=' basis-1/3 flex flex-row items-center justify-center gap-1 md:gap-4'>
             <button onClick={handle} className='flex flex-row items-center justify-between'>
                 Search   
             <CiSearch className='w-[30px] h-[30px]'  />

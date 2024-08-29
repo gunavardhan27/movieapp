@@ -19,7 +19,7 @@ const SearchBar = () => {
     
   return (
     <div className='m-5 flex flex-col items-center justify-center gap-7'>
-    <input className='bg-blue-300 h-[36px] w-[600px] rounded-md text-gray-800' onChange={(event)=>setValue(event.target.value)} type='text' />
+    <input className='bg-slate-400 h-[36px] w-[600px] rounded-md text-gray-800' onChange={(event)=>setValue(event.target.value)} type='text' />
     <Map movies={filteredData.slice(0,30)} alt={val} />
 
     </div>
