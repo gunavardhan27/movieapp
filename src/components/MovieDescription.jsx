@@ -19,7 +19,6 @@ const MovieDescription = () => {
         favourites.push(movie);
         const fav = [...new Set(favourites)]
         localStorage.setItem('favourites', JSON.stringify(fav));
-        navigate('/favourites')
     }
   }
   function handleRemove(){

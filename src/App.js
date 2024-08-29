@@ -8,7 +8,9 @@ import NavBar from "./components/NavBar";
 function App() {
     const apiKey = process.env.REACT_APP_API_KEY;
     const [page,setPage] = useState(1)
-    
+    const handle = (val)=>{
+      setPage(val)
+    }
     const pageDecrease = ()=>{
       setPage(page-1)
     }
@@ -40,7 +42,7 @@ function App() {
     <div>
       <NavBar />
       
-    <Movies page={page} pageDecrease={pageDecrease} pageIncrease={pageIncrease} movieData={movieData} />
+    <Movies page={page} pageDecrease={pageDecrease} pageIncrease={pageIncrease} movieData={movieData} handle={handle} />
     </div>
   );
 }
