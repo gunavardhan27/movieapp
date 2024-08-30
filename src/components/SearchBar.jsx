@@ -25,7 +25,7 @@ const SearchBar = () => {
     }
     
   return (
-    <div className='p-4 flex flex-col items-center justify-center gap-7 bg-[#83B4FF] '>
+    <div className='p-4 flex flex-col items-center justify-center gap-7 bg-[#83B4FF]'>
       <FaArrowLeft className='top-0 left-0 absolute mt-4 w-[20px] h-[20px] ' onClick={handle} />
     <input className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-[50%]
      focus:ring-blue-500 focus:border-blue-500 block ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600

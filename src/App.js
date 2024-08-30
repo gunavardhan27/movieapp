@@ -34,7 +34,22 @@ function App() {
         await new Promise(resolve => setTimeout(resolve, 500));
       }
       }
-      fun()
+      async function genres(){
+        const genreUrl = `https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}`
+        const response = await fetch(genreUrl)
+        if(response.ok){
+          const data = await response.json()
+          //store.dispatch(movieAction.addMovies(data))
+          store.dispatch(movieAction.addGenres(data))
+        }
+        else{
+          const errorData = await response.json()
+          console.log(errorData)
+        }
+        
+      }
+      fun();
+      genres()
   },[])
   const movieData = useSelector(state=>state.movies.movies)
   

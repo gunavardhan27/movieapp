@@ -1,6 +1,6 @@
 import { createSlice,configureStore } from "@reduxjs/toolkit";
 
-const initialMovieList = {movies:[],allMovies:[]}
+const initialMovieList = {movies:[],allMovies:[],genres:[]}
 
 const movieSlice = createSlice({
     name:"list",
@@ -13,6 +13,10 @@ const movieSlice = createSlice({
                 newItems.push(action.payload.results[i])
             }
             state.allMovies = [...state.allMovies,...newItems]
+        },
+        addGenres(state,action){
+            state.genres = [...state.genres,...action.payload.genres]
+            console.log(state.genres)
         }
     }
 })
