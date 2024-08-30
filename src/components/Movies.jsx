@@ -10,7 +10,7 @@ const Movies = ({page,pageDecrease,pageIncrease,movieData,handle}) => {
       {[page,page+1,page+2].map(val=>(
         <button className={`px-2 rounded-full ${page===val && 'bg-blue-900 text-white'} rounded-full`} onClick={()=>handle(val)}>{val}</button>
       ))}
-      {page<45706 && <Button toggle={pageIncrease} className="p-2 hover:bg-blue-400 rounded-md">Next</Button>}
+      {movieData && page<45706 && <Button toggle={pageIncrease} className="p-2 hover:bg-blue-400 rounded-md">Next</Button>}
     </div>
     </div>
   )

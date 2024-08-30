@@ -50,7 +50,7 @@ const MovieDescription = () => {
     <div className='flex flex-col md:flex-row items-center justify-center md:items-start md:justify-around gap-4 m-6 shadow-black shadow-lg bg-gray-400 p-2'>
     <img className='w-[90%] h-[150px] md:basis-1/2 md:h-[440px] rounded-md' src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`} />
     
-    <div className='mb-2 w-[90%] md:basis-1/2 flex flex-col items-center justify-around p-5'>
+    <div className='mb-2 w-[90%] md:basis-1/2 flex flex-col items-center justify-around'>
       <p className='text-3xl font-bold mb-4'>
       {movie.original_title}
       </p>
@@ -58,6 +58,7 @@ const MovieDescription = () => {
         {genres.map(genre=>(
           <p key={genre} className='p-2 rounded-2xl text-white bg-blue-700'>{genre}</p>
         ))}
+        
       </p>
       <p className='flex flex-row items-center justify-center gap-1 mb-3 mt-3'>
       <FaRegStar className='text-yellow-500' />
