@@ -11,17 +11,21 @@ const SearchBar = () => {
     navigate('/')
   }
     const data = useSelector(state=>state.movies.allMovies)
-    let val = 'Search Something....'
+    let val = ''
     const [search,setValue] = useState('')
     let filteredData = []
     if(search){
         filteredData = data.filter((item) =>
         item.original_title.toLowerCase().includes(search.toLowerCase())
-    );
-    val = 'No results found ....'
+            );
+            if(!filteredData.length){
+              val = 'No results found ....'
+            }
+    
+    
     }
     else{
-    val = ''
+    val = 'Search Something...'
     }
     
   return (
@@ -32,7 +36,7 @@ const SearchBar = () => {
      dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500' 
      placeholder='Search here....'
      onChange={(event)=>setValue(event.target.value)} type='text' />
-    {filteredData.length ? <Map movies={filteredData.slice(0,28)} alt={val} />:''}
+    {<Map movies={filteredData.slice(0,28)} alt={val} />}
 
     </div>
   )
