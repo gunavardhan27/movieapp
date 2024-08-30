@@ -41,7 +41,7 @@ After adding the apiKey inside the .env file,start the server using: npm start
 Movieplix is deployed on Vercel and can be accessed via this link: https://movieapp-six-nu.vercel.app/
 
 
-![home-page](images/home-page.png)
+![home-page](src/images/home-page.png)
 
 ![description](images/description.png)
 
