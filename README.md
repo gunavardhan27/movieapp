@@ -43,8 +43,8 @@ Movieplix is deployed on Vercel and can be accessed via this link: https://movie
 
 ![home-page](src/images/home-page.png)
 
-![description](images/description.png)
+![description](src/images/description.png)
 
-![search-bar](images/search-bar.png)
+![search-bar](src/images/search-bar.png)
 
-![Favourites](images/Favourites.png)
+![Favourites](src/images/Favourites.png)
